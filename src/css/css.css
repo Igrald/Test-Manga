@@ -1,0 +1,100 @@
+body {
+  margin: 0;
+}
+
+.active {
+  scroll-snap-type: unset;
+}
+
+li {
+  scroll-snap-align: center;
+  display: inline-block;
+  border-radius: 3px;
+  font-size: 0;
+}
+
+.section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.section__heading {
+  margin: 0;
+  color: white;
+  font-size: 32px;
+  text-transform: capitalize;
+}
+.main {
+  box-sizing: border-box;
+  background: black;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  /* scroll-behavior: smooth; */
+  /**/
+  scrollbar-color: #d4aa70 #ab4949;
+  scrollbar-width: thin;
+}
+
+.img {
+  max-width: 100vw;
+  max-height: 30rem;
+}
+
+.animate {
+  -webkit-animation: animatezoom 0.4s;
+  animation: animatezoom 0.4s;
+}
+
+/* @-webkit-keyframes anim {
+  from {
+    -webkit-transform: scale(0);
+  }
+  to {
+    -webkit-transform: scale(1);
+  }
+}
+
+@keyframes anim {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+} */
+
+@keyframes anim {
+  0% {
+    right: 200px;
+    top: 0px;
+  }
+  /* 25% {
+    right: 150px;
+    top: 0px;
+  } */
+  /* 50% {
+    right: 100px;
+  }
+  75% {
+    right: 50px;
+  } */
+  100% {
+    right: 0px;
+    top: 0px;
+  }
+}
+/* html::-webkit-scrollbar {
+  width: 20px;
+}
+
+html::-webkit-scrollbar-track {
+  background-color: black;
+}
+
+html::-webkit-scrollbar-thumb {
+  background: #4e4e4e;
+  border-radius: 25px;
+} */
