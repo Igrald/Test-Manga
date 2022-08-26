@@ -566,15 +566,20 @@ app.controllers = {
     const modal = document.createElement("div");
     const md = document.createElement("div");
     const btn = this.createButtons("X", () => {
-      app.controllers.go("home");
+      closeModal();
+      // app.controllers.go("home");
       app.state.countLess();
       app.state.valorLess();
+    });
+    const btnVoltar = this.createButtons("⇦", () => {
+      app.controllers.go("home");
     });
     const body = document.createElement("div");
     const modal2 = document.createElement("div");
     const modal3 = document.createElement("div");
     const mdDdicio = document.createElement("div");
     const dicio = document.createElement("p");
+    const md1 = document.createElement("div");
 
     modal.style.display = "flex";
     // modal.style.justifyContent = "flex-end";
@@ -601,8 +606,15 @@ app.controllers = {
     md.style.height = "fit-content";
     md.style.borderRadius = "15px";
 
+    md1.style.display = "flex";
+    md1.style.backgroundColor = "#FFFFFF";
+    // md1.style.border = "4px solid red";
+    md1.style.width = "fit-content";
+    md1.style.height = "fit-content";
+    md1.style.borderRadius = "15px";
+
     modal2.style.display = "flex";
-    modal2.style.justifyContent = "flex-end";
+    modal2.style.justifyContent = "space-between";
     // modal2.style.backgroundColor = "blue";
     // modal2.style.width = "100%";
     modal2.style.margin = "0.7rem";
@@ -680,6 +692,8 @@ app.controllers = {
     // md.appendChild(body);
 
     md.appendChild(btn);
+    md1.appendChild(btnVoltar);
+    modal2.appendChild(md1);
     modal2.appendChild(md);
     modal.appendChild(modal2);
     if (app.state.valor > 0) {

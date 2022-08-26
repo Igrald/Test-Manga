@@ -36,10 +36,10 @@ app.state = {
   dicio: {
     pag1: [
       "",
-      "Bakedanuki: animal do folclore japonês que consegue transformar-se em algo e tambêm transformar objetos.",
-      "kitsune: kitsuné é uma raposa mitológica do solclore japonês que consegue se transofrmar-se em algo e tambêm transformar objetos",
-      "dango: é um doce tradicional japones feito de arroz",
-      "yokai: ser folclorico da cultura japonesa, também pode ser interpretado como fantasma ou monstro",
+      "Bakedanuki(cão-guaxinim): animal do folclore japonês que consegue transformar-se em algo e tambêm transformar objetos.",
+      "kitsune (raposas): eles podem se transformar em outras coisas ou pessoas, e podem possuir seres humanos.",
+      "dango: é um doce tradicional japones feito de farinha de arroz",
+      "Yōkai (demônio, espírito, ou monstro): é uma classe de criaturas sobrenaturais do folclore japonês",
       "karague: é um frango empanado feito com gengibre, alho e shoyu",
     ],
   },
