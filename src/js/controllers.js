@@ -445,7 +445,33 @@ app.controllers = {
 
     container.innerHTML = "";
     container2.innerHTML = "";
+    if (window.screen.width >= 767) {
+      container2.appendChild(cr);
+      container2.appendChild(cr1);
+      container2.appendChild(cr2);
+      container2.appendChild(cr3);
 
+      console.log("oláaaaaaa");
+      container.style.display = "flex";
+      container.style.justifyContent = "center";
+
+      container.style.backgroundColor = "#292929";
+
+      cr.style.width = "720px";
+
+      container.appendChild(container2);
+    }
+    if (window.screen.width <= 767 && window.screen.height <= 1023) {
+      container2.appendChild(cr);
+      container2.appendChild(cr1);
+      container2.appendChild(cr2);
+      container2.appendChild(cr3);
+      console.log("olá");
+      container.style.display = "flex";
+      container.style.justifyContent = "center";
+
+      container.appendChild(container2);
+    }
     els.main.container.innerHTML = "";
     els.main.container.appendChild(container);
   },
