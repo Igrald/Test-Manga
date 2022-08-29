@@ -466,7 +466,7 @@ app.controllers = {
       container2.appendChild(cr1);
       container2.appendChild(cr2);
       container2.appendChild(cr3);
-      console.log("olá1");
+      console.log("olá");
       container.style.display = "flex";
       container.style.justifyContent = "center";
 
