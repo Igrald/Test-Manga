@@ -32,9 +32,26 @@ li {
   /* font-size: 16px; */
   -webkit-font-smoothing: antialiased;
   /* scroll-behavior: smooth; */
-  /**/
-  scrollbar-color: #d4aa70 #ab4949;
-  scrollbar-width: thin;
+}
+::-webkit-scrollbar {
+  width: 20px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #292929;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(102, 102, 102);
+  border-radius: 15px;
+  height: 50px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(59, 59, 59);
 }
 
 .img {

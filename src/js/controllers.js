@@ -32,7 +32,6 @@ app.controllers = {
     els.root.style.height = "100vh";
     els.root.style.display = "flex";
     els.root.style.flexDirection = "column";
-    // this.createHeader();
     els.main.container.style.flexGrow = "1";
     els.root.appendChild(els.main.container);
   },
@@ -85,9 +84,6 @@ app.controllers = {
     img10.classList.add("img");
 
     main.classList.add("main");
-
-    // scrollbar-color: #d4aa70 #ab4949;
-    // scrollbar-width: thin;
 
     img.src = "./assets/1.jpg";
     img1.src = "./assets/2.jpg";
@@ -356,9 +352,6 @@ app.controllers = {
 
     main.classList.add("main");
 
-    // scrollbar-color: #d4aa70 #ab4949;
-    // scrollbar-width: thin;
-
     img.src = "./assets/34.jpg";
     img1.src = "./assets/35.jpg";
     img2.src = "./assets/36.jpg";
@@ -418,11 +411,8 @@ app.controllers = {
     const cr1 = this.crr1();
     const cr2 = this.crr2();
     const cr3 = this.crr3();
-
-    container2.style.backgroundColor = "blue";
-    container2.style.height = "3rem";
-    container2.style.display = "flex";
-    container2.style.justifyContent = "center";
+    const cont3 = document.createElement("div");
+    const cont4 = document.createElement("div");
 
     const btn = this.createButtons("olá", () => {
       app.controllers.go("home");
@@ -455,10 +445,33 @@ app.controllers = {
 
     container.innerHTML = "";
     container2.innerHTML = "";
-    container.appendChild(cr);
-    container.appendChild(cr1);
-    container.appendChild(cr2);
-    container.appendChild(cr3);
+    if (window.screen.width >= 767) {
+      container2.appendChild(cr);
+      container2.appendChild(cr1);
+      container2.appendChild(cr2);
+      container2.appendChild(cr3);
+
+      console.log("oláaaaaaa");
+      container.style.display = "flex";
+      container.style.justifyContent = "center";
+
+      container.style.backgroundColor = "#292929";
+
+      cr.style.width = "720px";
+
+      container.appendChild(container2);
+    }
+    if (window.screen.width <= 767 && window.screen.height <= 1023) {
+      container2.appendChild(cr);
+      container2.appendChild(cr1);
+      container2.appendChild(cr2);
+      container2.appendChild(cr3);
+      console.log("olá1");
+      container.style.display = "flex";
+      container.style.justifyContent = "center";
+
+      container.appendChild(container2);
+    }
     els.main.container.innerHTML = "";
     els.main.container.appendChild(container);
   },
@@ -472,7 +485,6 @@ app.controllers = {
     container.style.justifyContent = "center";
     container.style.backgroundColor = "blue";
     container.style.height = "5rem";
-    // container.style.border = "1px solid green";
 
     els.root.appendChild(container);
   },
@@ -520,7 +532,6 @@ app.controllers = {
     bt.style.height = "10rem";
     bt.style.width = "10rem";
     bt.style.borderRadius = "100px";
-    // bt.style.border = "6px solid white";
     bt.style.display = "flex";
     bt.style.alignItems = "center";
     bt.style.justifyContent = "center";
@@ -529,10 +540,6 @@ app.controllers = {
     cont.style.alignItems = "center";
     cont.style.justifyContent = "center";
     cont.style.border = "4px solid gray";
-    // cont.style.paddingTop = "15rem";
-    // cont.style.paddingBottom = "15rem";
-    // cont.style.paddingLeft = "4rem";
-    // cont.style.paddingRight = "3.5rem";
     cont.style.margin = "0px";
     cont.style.borderRadius = "150px";
     cont.style.padding = "1rem";
@@ -567,7 +574,6 @@ app.controllers = {
     const md = document.createElement("div");
     const btn = this.createButtons("X", () => {
       closeModal();
-      // app.controllers.go("home");
       app.state.countLess();
       app.state.valorLess();
     });
@@ -580,10 +586,9 @@ app.controllers = {
     const mdDdicio = document.createElement("div");
     const dicio = document.createElement("p");
     const md1 = document.createElement("div");
+    const md3 = document.createElement("div");
 
     modal.style.display = "flex";
-    // modal.style.justifyContent = "flex-end";
-    // modal.style.alignItems = "center";
     modal.style.justifyContent = "space-between";
     modal.style.position = "fixed";
     modal.style.top = "0";
@@ -594,29 +599,23 @@ app.controllers = {
     modal.style.flexDirection = "column";
 
     body.style.width = "10rem";
-    // body.style.backgroundColor = "red";
 
-    // btn.style.border = "1px solid red";
     btn.style.borderRadius = "15px";
 
     md.style.display = "flex";
     md.style.backgroundColor = "#FFFFFF";
-    // md.style.border = "4px solid red";
     md.style.width = "fit-content";
     md.style.height = "fit-content";
     md.style.borderRadius = "15px";
 
     md1.style.display = "flex";
     md1.style.backgroundColor = "#FFFFFF";
-    // md1.style.border = "4px solid red";
     md1.style.width = "fit-content";
     md1.style.height = "fit-content";
     md1.style.borderRadius = "15px";
 
     modal2.style.display = "flex";
     modal2.style.justifyContent = "space-between";
-    // modal2.style.backgroundColor = "blue";
-    // modal2.style.width = "100%";
     modal2.style.margin = "0.7rem";
 
     modal2.classList.add("backdrop");
@@ -634,50 +633,23 @@ app.controllers = {
     modal3.style.justifyContent = "center";
     modal3.style.alignContent = "center";
     modal3.style.backgroundColor = "#FFFFFF";
-    // modal3.style.border = "4px solid green";
     modal3.style.width = "fit-content";
-    // modal3.style.height = "fit-content";
     modal3.style.padding = "1.5rem";
     modal3.style.margin = "0.5rem";
     modal3.style.borderRadius = "15px";
     modal3.style.position = "relative";
     modal3.style.animationName = "anim";
-    // modal3.style.animationDuration = "0.4s";
     modal3.style.animationDuration = "1s";
 
     mdDdicio.style.display = "flex";
     mdDdicio.style.justifyContent = "center";
     mdDdicio.style.alignContent = "center";
-    // mdDdicio.style.border = "1px solid red";
 
     dicio.style.fontSize = "20px";
     dicio.style.textAlign = "center";
     dicio.style.letterSpacing = "1px";
     dicio.style.color = "#303030";
 
-    // background-color: red;
-    // position: relative;
-    // animation-name: example;
-    // animation-duration: 4s;
-
-    // var scroll = window.pageYOffset;
-    // window.onscroll = () => {
-    //   var currentScroll = window.pageYOffset;
-    //   if (scroll > currentScroll) {
-    //     modal3.style.top = "0";
-    //   } else {
-    //     modal3.style.top = "-6rem";
-    //   }
-    //   scroll = currentScroll;
-    // };
-
-    // text-indent: 50px;
-    // text-align: justify;
-    // letter-spacing: 3px;
-
-    // md.style.width = "1rem";
-    // md.style.height = "1rem";
-    // md.style.padding = "10px";
     modal.classList.add("backdrop");
     modal.onclick = (e) => {
       if (e.target.classList.contains("backdrop")) {
@@ -689,8 +661,19 @@ app.controllers = {
       }
     };
 
-    // md.appendChild(body);
+    if (window.screen.width >= 767) {
+      console.log("yuhuu");
+      md.style.margin = "3rem";
+      md1.style.margin = "3rem";
 
+      btn.style.margin = "1rem";
+      btnVoltar.style.margin = "0.5rem";
+
+      modal3.style.width = "fit-content";
+      modal3.style.height = "fit-content";
+
+      dicio.style.fontSize = "26px";
+    }
     md.appendChild(btn);
     md1.appendChild(btnVoltar);
     modal2.appendChild(md1);
@@ -699,9 +682,13 @@ app.controllers = {
     if (app.state.valor > 0) {
       dicio.innerHTML = app.state.dicio.pag1[app.state.valor];
 
+      md3.style.display = "flex";
+      md3.style.justifyContent = "center";
+
       mdDdicio.appendChild(dicio);
       modal3.appendChild(mdDdicio);
-      modal.appendChild(modal3);
+      md3.appendChild(modal3);
+      modal.appendChild(md3);
     }
 
     return modal;
